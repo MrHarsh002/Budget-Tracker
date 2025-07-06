@@ -17,7 +17,7 @@ const Header = async () => {
             alt="Budget Tracker Logo"
             height={60}
             width={200}
-            className="h-15 w-auto pl-12  object-contain"
+            className="h-15 w-auto object-contain"
           />
         </Link>
 
