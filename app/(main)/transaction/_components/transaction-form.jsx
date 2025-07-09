@@ -139,7 +139,7 @@ export function AddTransactionForm({
           onValueChange={(value) => setValue("type", value)}
           defaultValue={type}
         >
-          <SelectTrigger>
+          <SelectTrigger className="cursor-pointer">
             <SelectValue placeholder="Select type" />
           </SelectTrigger>
           <SelectContent>
@@ -173,7 +173,7 @@ export function AddTransactionForm({
             onValueChange={(value) => setValue("accountId", value)}
             defaultValue={getValues("accountId")}
           >
-            <SelectTrigger>
+            <SelectTrigger className="cursor-pointer">
               <SelectValue placeholder="Select account" />
             </SelectTrigger>
             <SelectContent>
@@ -185,7 +185,7 @@ export function AddTransactionForm({
               <CreateAccountDrawer>
                 <Button
                   variant="ghost"
-                  className="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+                  className="relative flex w-full select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none hover:bg-accent hover:text-accent-foreground cursor-pointer"
                 >
                   Create Account
                 </Button>
@@ -200,12 +200,12 @@ export function AddTransactionForm({
 
       {/* Category */}
       <div className="space-y-2">
-        <label className="text-sm font-medium">Category</label>
+        <label className="text-sm font-medium ">Category</label>
         <Select
           onValueChange={(value) => setValue("category", value)}
           defaultValue={getValues("category")}
         >
-          <SelectTrigger>
+          <SelectTrigger className="cursor-pointer">
             <SelectValue placeholder="Select category" />
           </SelectTrigger>
           <SelectContent>
@@ -229,7 +229,7 @@ export function AddTransactionForm({
             <Button
               variant="outline"
               className={cn(
-                "w-full pl-3 text-left font-normal",
+                "w-full pl-3 text-left font-normal cursor-pointer",
                 !date && "text-muted-foreground"
               )}
             >
@@ -271,7 +271,7 @@ export function AddTransactionForm({
             Set up a recurring schedule for this transaction
           </div>
         </div>
-        <Switch
+        <Switch className="cursor-pointer"
           checked={isRecurring}
           onCheckedChange={(checked) => setValue("isRecurring", checked)}
         />
@@ -285,7 +285,7 @@ export function AddTransactionForm({
             onValueChange={(value) => setValue("recurringInterval", value)}
             defaultValue={getValues("recurringInterval")}
           >
-            <SelectTrigger>
+            <SelectTrigger className="cursor-pointer">
               <SelectValue placeholder="Select interval" />
             </SelectTrigger>
             <SelectContent>
@@ -308,12 +308,12 @@ export function AddTransactionForm({
         <Button
           type="button"
           variant="outline"
-          className="w-[50%]"
+          className="w-[50%] cursor-pointer"
           onClick={() => router.back()}
         >
           Cancel
         </Button>
-        <Button type="submit" className="w-[50%]" >
+        <Button type="submit" className="w-[50%] cursor-pointer" >
             Create Transaction
         </Button>
       </div>
